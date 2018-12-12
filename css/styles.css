@@ -3,14 +3,18 @@
 ****/
 
 /* Set primary styles for body content */
-body {
+html, body {
+    display: flex;
+    position: relative;
+    flex-direction: column;
     font-family: Arial, sans-serif;
+    height: 100%;
     margin: 0;
     box-sizing: border-box;
     box-sizing: padding-box;
     background-color: rgb(235,235,235);
-    color: rgb(25,25,25);
-    position: relative;
+    color: #171717;
+    overflow-x: hidden;
 }
 /* Remove padding from unordered list tags */
 ul {
@@ -29,7 +33,9 @@ a {
 
 /* Display main page wrappers as flex */
 #mainWrapper {
-    margin-left: 15%;
+    margin-left: 65px;
+    margin-bottom: 75px;
+    height: 100%;
     width: 75%;
 }
 /* Cross site navigation styles */
@@ -37,9 +43,13 @@ a {
     text-align: center;
     background-color: lightgray;
     height: 100vh;
+    min-height: 100%;
     width: 50px;
     position: absolute;
     left: 0;
+    z-index: 2;
+    box-shadow: 2px 0 10px;
+    overflow-y: hidden
 }
 
 #mainNav img {
@@ -53,7 +63,7 @@ a {
 }
 
 .navLi a {
-    border: 1px solid #000;
+    border: 1px solid #171717;
     padding: 5px 8px 5px 8px;
     border-radius: 50%;
     display: inline-block;
@@ -100,14 +110,25 @@ h2 {
     -webkit-animation: slideInContent 2s;
     animation: slideInContent 2s;
 }
+/**** 
+   --- Home Page styles ---
+****/
+#pageContent {
+    z-index: -1;
+}
+
+#pageContent h3 {
+    margin-top: 0;
+}
 
 #profileImage {
     text-align: center;
-    margin: auto;
-    width: 200px;
+    width: 50%;
+    max-width: 400px;
+    min-width: 200px;
     border-radius: 15%;
-    box-shadow: 5px 5px 15px rgb(0,0,0);
-    background-color: rgba(0,0,0, .90);
+    box-shadow: 5px 5px 15px #171717;
+    background-color: #171717;
     animation: dropInContent 2s; /* Animate on page load */
 }
 
@@ -117,25 +138,20 @@ h2 {
     border-radius: 50%;
 }
 
-/**** 
-   --- Home Page styles ---
-****/
-
-#pageContent h3 {
-    margin-top: 0;
-}
-
+/* This button/feature only displays with JavaScript */
 #colorChanger {
-    text-align: center;
-    margin-top: 50px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
 }
 
 #colorChanger button {
     border: none;
     padding: 5px;
+    width: 150px;
     color: rgb(255,255,255);
-    background-color: rgba(0,0,0, .9);
-    box-shadow: 2px 2px 10px rgb(0,0,0);
+    background-color: #171717;
+    box-shadow: 2px 2px 10px #171717;
     transition: transform 0.5s ease;
 }
 
@@ -143,6 +159,16 @@ h2 {
     transform: scale(1.25);
     transition: transform: 1s ease;
     cursor: pointer;
+}
+
+/* Main Footer Styles */
+#mainFooter {
+    background-color: #171717;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
 }
 
 /* keyframes for various animations */
