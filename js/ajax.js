@@ -11,21 +11,23 @@ const skillsNav = document.querySelector('.skillsLi');
 const portNav = document.querySelector('.portLi');
 
 //Home content (broken currently)
-/*homeNav.addEventListener('click', () => {
+homeNav.addEventListener('click', () => {
+    profImg.style.display = 'block';
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            body.innerHTML = this.responseText;
+            mainWrapper.innerHTML = this.responseText;
         }
     };
-    xhr.open('GET', 'index.html', true);
+    xhr.open('GET', 'home.html', true);
     xhr.send();
-});*/
+});
 
 /* Uses Ajax to pull html from other pages without leaving the index page*/
 
 //About content
 aboutNav.addEventListener('click', () => {
+    profImg.style.display = 'none';
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -38,6 +40,7 @@ aboutNav.addEventListener('click', () => {
 
 //Skills content
 skillsNav.addEventListener('click', () => {
+    profImg.style.display = 'none';
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -50,6 +53,7 @@ skillsNav.addEventListener('click', () => {
 
 //Portfolio content
 portNav.addEventListener('click', () => {
+    profImg.style.display = 'none';
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
