@@ -92,13 +92,14 @@ a {
 
 /* Add animation on page load */
 h1 {
-    -webkit-animation: fadeInHeading 2s;
-    animation: fadeInHeading 3s;
+    -webkit-animation: fadeIn 2s;
+    animation: fadeIn 3s;
 }
 
 h2 {
-    -webkit-animation: fadeInHeading 2s;
-    animation: fadeInHeading 3s;
+    font-size: 2.5rem;
+    -webkit-animation: fadeIn 2s;
+    animation: fadeIn 3s;
 }
 
 /* Add margin to content to add space between content and navigation */
@@ -120,11 +121,10 @@ h2 {
 
 #profileImage {
     text-align: center;
+    margin: 0 auto 65px auto;
     width: 50%;
     max-width: 400px;
     min-width: 200px;
-    margin-bottom: 150px;
-    margin-left: 65px;
     border-radius: 15%;
     box-shadow: 5px 5px 15px #171717;
     background-color: #171717;
@@ -137,6 +137,10 @@ h2 {
     border-radius: 50%;
 }
 
+#profileImage ul {
+    color: rgb(255,255,255);
+    margin-top: 0;
+}
 /* This button/feature only displays with JavaScript */
 #colorChanger {
     position: fixed;
@@ -159,6 +163,90 @@ h2 {
     cursor: pointer;
 }
 
+/**** 
+   --- About Page styles ---
+****/
+#aboutP {
+    font-size: 1.25rem;
+}
+
+#aboutP span {
+    font-weight: bold;
+}
+
+
+#dates {
+    margin-bottom: 65px;
+}
+
+#dates li {
+    margin-bottom: 15px;
+    min-height: 5rem;
+    max-width: 500px;
+}
+
+#dates li span {
+    animation: shrinkLetters 1s;
+}
+
+#dates li span:hover {
+    animation: stretchLetters 1s;
+}
+
+#date1 {
+    background-color: #171717;
+    color: rgb(255,255,255);
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: fadeIn 1s;
+}
+
+#date2 {
+    background-color: #171717;
+    color: rgb(255,255,255);
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: fadeIn 2s;
+}
+
+#date3 {
+    background-color: #171717;
+    color: rgb(255,255,255);
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: fadeIn 3s;
+}
+
+#date4 {
+    background-color: #171717;
+    color: rgb(255,255,255);
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: fadeIn 4s;
+}
+
+#date5 {
+    background-color: #171717;
+    color: rgb(255,255,255);
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: fadeIn 5s;
+}
+
+#date6 {
+    background-color: #171717;
+    color: rgb(255,255,255);
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: fadeIn 6s;
+}
+
 /* Main Footer Styles */
 #mainFooter {
     background-color: #171717;
@@ -173,14 +261,24 @@ h2 {
 }
 
 /* keyframes for various animations */
-@keyframes fadeInHeading {
+@keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-@-webkit-keyframes fadeInHeading {
+@-webkit-keyframes fadeIn {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 
 @keyframes slideInContent {
@@ -221,4 +319,24 @@ h2 {
           transform: rotate(0deg);}
     to {opacity: 1;
         transform: rotate(360deg);}
+}
+
+@keyframes stretchLetters {
+    from { letter-spacing: inherit; }
+    to   { letter-spacing: 4px; }
+}
+
+@-webkit-keyframes stretchLetters {
+    from { letter-spacing: inherit; }
+    to   { letter-spacing: 4px; }
+}
+
+@keyframes shrinkLetters {
+    from { letter-spacing: 4px; }
+    to   { letter-spacing: inherit; }
+}
+
+@-webkit-keyframes shrinkLetters {
+    from { letter-spacing: 4px; }
+    to   { letter-spacing: inherit; }
 }
