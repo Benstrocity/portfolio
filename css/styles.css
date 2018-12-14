@@ -3,17 +3,19 @@
 ****/
 
 /* Set primary styles for body content */
-html, body {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    height: 100%;
-    margin: 0;
+html {
+    min-height: 100%;
+    position: relative;
     box-sizing: border-box;
     box-sizing: padding-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background-color: rgb(235,235,235);
     color: #171717;
-    overflow-x: hidden;
+    margin-bottom: 150px;
 }
 /* Remove padding from unordered list tags */
 ul {
@@ -32,31 +34,43 @@ a {
 
 /* Display main page wrappers as flex */
 #mainWrapper {
-    margin-left: 65px;
-    width: 75%;
+    margin: auto;
+    width: 85%;
 }
 /* Cross site navigation styles */
 #mainNav {
-    text-align: center;
+    display: flex;
     background-color: lightgray;
-    height: 100vh;
-    min-height: 100%;
-    width: 50px;
-    position: absolute;
-    left: 0;
     z-index: 2;
+    height: 100px;
     box-shadow: 2px 0 10px;
-    overflow-y: hidden
+    position: relative;
 }
 
 #mainNav img {
-    width: 75%;
+    width: 25%;
     border-radius: 25%;
     transition: .5s;
 }
 /* Add padding to separate nav items */
+#mainNav ul {
+    display: none;
+    align-items: center;
+}
+
+#mainNav span {
+    align-self: center;
+    margin-right: 20px;
+}
+
 #mainNav li {
-    padding-bottom: 50px;
+    padding: 0 10px 0 10px;
+}
+
+.aboutLi,
+.skillsLi,
+.portLi {
+    animation: slideFromRight 1s;
 }
 
 .navLi a {
@@ -121,7 +135,8 @@ h2 {
 
 #profileImage {
     text-align: center;
-    margin: 0 auto 65px auto;
+    margin: auto auto 50px auto;
+    padding-bottom: 15px;
     width: 50%;
     max-width: 400px;
     min-width: 200px;
@@ -143,9 +158,8 @@ h2 {
 }
 /* This button/feature only displays with JavaScript */
 #colorChanger {
-    position: fixed;
-    right: 25px;
-    top: 10px;
+    position: absolute;
+    bottom: -25px;
 }
 
 #colorChanger button {
@@ -154,12 +168,12 @@ h2 {
     width: 125px;
     color: rgb(255,255,255);
     background-color: #171717;
-    transition: transform 0.5s ease;
+    transition: 0.5s ease;
 }
 
 #colorChanger button:hover {
-    transform: scale(1.25);
-    transition: transform: 1s ease;
+    opacity: .75;
+    transition: .5s ease;
     cursor: pointer;
 }
 
@@ -254,10 +268,10 @@ h2 {
     text-align: center;
     font-size: .8rem;
     width: 100%;
+    padding: 25px 0 25px 0;
     position: absolute;
-    bottom: 0;
     left: 0;
-    z-index: 3;
+    bottom: 0;
 }
 
 /* keyframes for various animations */
@@ -291,6 +305,20 @@ h2 {
 @-webkit-keyframes slideInContent {
     from {opacity: 0;
           transform: translateX(-20px);}
+    to {opacity: 1;
+        transform: translateY(0);}
+}
+
+@keyframes slideFromRight {
+    from {opacity: 0;
+          transform: translateX(20px);}
+    to {opacity: 1;
+        transform: translateY(0);}
+}
+
+@-webkit-keyframes slideFromRight {
+    from {opacity: 0;
+          transform: translateX(20px);}
     to {opacity: 1;
         transform: translateY(0);}
 }
