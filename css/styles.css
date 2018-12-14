@@ -54,11 +54,12 @@ a {
 }
 /* Add padding to separate nav items */
 #mainNav ul {
-    display: none;
+    display: flex;
     align-items: center;
 }
 
-#mainNav span {
+
+#toggle {
     align-self: center;
     margin-right: 20px;
 }
@@ -67,10 +68,8 @@ a {
     padding: 0 10px 0 10px;
 }
 
-.aboutLi,
-.skillsLi,
-.portLi {
-    animation: slideFromRight 1s;
+#toggleItems {
+    display: none;
 }
 
 .navLi a {
@@ -285,6 +284,16 @@ h2 {
     to   { opacity: 1; }
 }
 
+@keyframes fadeIn2 {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn2 {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 @keyframes fadeOut {
     from {opacity: 1;}
     to {opacity: 0;}
@@ -311,16 +320,30 @@ h2 {
 
 @keyframes slideFromRight {
     from {opacity: 0;
-          transform: translateX(20px);}
+          transform: translateX(120px);}
     to {opacity: 1;
-        transform: translateY(0);}
+        transform: translateX(0);}
 }
 
 @-webkit-keyframes slideFromRight {
     from {opacity: 0;
-          transform: translateX(20px);}
+          transform: translateX(120px);}
     to {opacity: 1;
-        transform: translateY(0);}
+        transform: translateX(0);}
+}
+
+@keyframes slideFromLeft {
+    from {opacity: 0;
+          transform: translateX(-120px);}
+    to {opacity: 1;
+        transform: translateX(0);}
+}
+
+@-webkit-keyframes slideFromLeft {
+    from {opacity: 0;
+          transform: translateX(-120px);}
+    to {opacity: 1;
+        transform: translateX(0);}
 }
 
 @keyframes dropInContent {
