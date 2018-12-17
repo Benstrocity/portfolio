@@ -9,12 +9,13 @@
 	<body>
         <nav id='mainNav'>
             <ul>
-                <li class ='homeLi'><a href='#'><img src='img/profile.jpg' alt='Image of Ben'></a></li>
-                <span id='toggle'>Img</span>
+                <li class ='logoLi'><a href='#'><img src='img/profile.jpg' alt='Image of Ben'></a></li>
+                <span id='toggle'></span>
                 <span id='toggleItems'>
-                    <li class='navLi aboutLi'><a href='#'>A</a></li>
-                    <li class='navLi skillsLi'><a href='#'>B</a></li>
-                    <li class='navLi portLi'><a href='#'>C</a></li>
+                    <li class='homeLi'><img src='img/homeIcon.png' alt='Home menu icon'></li>
+                    <li class='navLi aboutLi'><img src='img/aboutIcon.png' alt='Skills menu icon'></li>
+                    <li class='navLi skillsLi'><img src='img/skills.png' alt='Skills menu icon'></li>
+                    <li class='navLi portLi'><a href='#'><img src='img/portIcon.jpg.png' alt='Portfolio menu icon'></a></li>
                 </span>
             </ul>
             <div id='colorChanger'>
@@ -35,18 +36,18 @@
         </div>
         
         <div id='profileImage'>
-            <img src='img/profile.jpg' alt='Image of Ben'>
+            <img id='profile' src='img/profile.jpg' alt='Image of Ben'>
             <ul>
-                <li>
-                    <span>a</span>
+                <li id='husbandLi'>
+                    <span><img id='husbandImg' src='img/husband.png' alt='Husband image'></span>
                     Husband
                 </li>
                 <li>
-                    <span>c</span>
+                    <span><img id='friendImg' src='img/friends.png' alt='Friend image'></span>
                     Friend
                 </li>
                 <li>
-                    <span>b</span>
+                    <span><img id='devImg' src='img/developer.png' alt='Developer image'></span>
                     Developer
                 </li>
             </ul>
@@ -58,7 +59,7 @@
         </footer>
 
         <script src='js/theme.js'></script>
-        <script src='js/ajax.js'></script>
+        <script src='js/pages.js'></script>
         <script src='js/menu.js'></script>
 	</body>
 </html>

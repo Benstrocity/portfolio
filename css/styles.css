@@ -47,7 +47,7 @@ a {
     position: relative;
 }
 
-#mainNav img {
+.logoLi img {
     width: 25%;
     border-radius: 25%;
     transition: .5s;
@@ -55,29 +55,54 @@ a {
 /* Add padding to separate nav items */
 #mainNav ul {
     display: flex;
+    margin: auto;
     align-items: center;
 }
 
-
 #toggle {
-    align-self: center;
-    margin-right: 20px;
+    text-align: center;
+}
+
+#toggle.closed img {
+    width: 50px;
+}
+
+#toggle.open img {
+    width: 25px;
 }
 
 #mainNav li {
-    padding: 0 10px 0 10px;
+    padding: 0 15px 0 15px;
 }
 
 #toggleItems {
     display: none;
 }
 
-.navLi a {
-    border: 1px solid #171717;
-    padding: 5px 8px 5px 8px;
-    border-radius: 50%;
-    display: inline-block;
+.homeLi,
+.skillsLi,
+.aboutLi,
+.portLi {
+    text-align: center;
+    width: 50px;
 }
+
+.homeLi img {
+    width: 30px;
+}
+
+.aboutLi img {
+    width: 30px;
+}
+
+.skillsLi img {
+    width: 30px;
+}
+
+.portLi img {
+    width: 30px;
+}
+
 
 /* Add hover animations to navigation items */
 #mainNav img:hover {
@@ -136,7 +161,7 @@ h2 {
     text-align: center;
     margin: auto auto 50px auto;
     padding-bottom: 15px;
-    width: 50%;
+    width: 75%;
     max-width: 400px;
     min-width: 200px;
     border-radius: 15%;
@@ -145,11 +170,33 @@ h2 {
     animation: dropInContent 2s; /* Animate on page load */
 }
 
-#profileImage img {
+#profileImage ul {
+    display: flex;
+    justify-content: center;
+}
+
+#profileImage li {
+    padding: 0 5px 0 5px;
+}
+
+#profile {
     width: 75%;
     padding: 15px;
     border-radius: 50%;
 }
+
+#husbandImg {
+    width: 20px;
+}
+
+#friendImg {
+    width: 20px;
+}
+
+#devImg {
+    width: 20px;
+}
+
 
 #profileImage ul {
     color: rgb(255,255,255);
