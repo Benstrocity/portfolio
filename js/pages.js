@@ -42,7 +42,9 @@ logoNav.addEventListener('click', () => {
                 </li>
             </ul>
         </div>`;
-    toggleOff();
+    if (html.clientWidth < 750) {
+        toggleOff();
+    }
 });
 
 homeNav.addEventListener('click', () => {
@@ -75,7 +77,9 @@ homeNav.addEventListener('click', () => {
                 </li>
             </ul>
         </div>`;
-    toggleOff();
+    if (html.clientWidth < 750) {
+        toggleOff();
+    }
 });
 
 /* Uses Ajax to pull html from other pages without leaving the index page*/
@@ -91,45 +95,47 @@ aboutNav.addEventListener('click', () => {
          <div id='pageContent'>
             <p id='aboutP'><span>It</span> started with a big dream and a desire to create a fulfilling life for myself and my family.</p>
             <ul id='dates'>
-            <li id='date1'>
-            <span>May 2016</span>
+                <li id='date1'>
+                <span>May 2016</span>
+                    <p>
+                    - I graduated from college and took a position as an intern Web Developer for a local design agency.
+                    </p>
+                </li>
+                <li id='date2'>
+                    <span>August 2016</span>
+                    <p>
+                    - I began working at a software development company in the support desk. This was a way to get my foot int he door of programming.
+                    </p>
+                </li>
+                <li id='date3'>
+                <span>April 2017</span>
                 <p>
-                - I graduated from college and took a position as an intern Web Developer for a local design agency.
+                    - I took a position with an IT managed service provider as a Systems Administrator.
                 </p>
-            </li>
-            <li id='date2'>
-                <span>August 2016</span>
-                <p>
-                - I began working at a software development company in the support desk. This was a way to get my foot int he door of programming.
-                </p>
-            </li>
-            <li id='date3'>
-            <span>April 2017</span>
-            <p>
-                - I took a position with an IT managed service provider as a Systems Administrator.
-            </p>
-            </li>
-            <li id='date4'>
-                <span>August 2017</span>
-                <p>
-                - I took a promotion to a Network Engineer role.
-                </p>
-            </li>
-            <li id='date5'>
-                <span>September 2018</span>
-                <p>
-                - Begin studying and learning how to program with JavaScript.
-                </p>
-            </li>
-            <li id='date6'>
-            <span>August 2018</span>
-                <p>
-                - Fast forward one year; I decided to moved back to my Systems Administrator role to give me more time to focus on programming.
-                </p>
-            </li>
-        </ul>
-    </div>`;
-    toggleOff();
+                </li>
+                <li id='date4'>
+                    <span>August 2017</span>
+                    <p>
+                    - I took a promotion to a Network Engineer role.
+                    </p>
+                </li>
+                <li id='date5'>
+                    <span>September 2018</span>
+                    <p>
+                    - Begin studying and learning how to program with JavaScript.
+                    </p>
+                </li>
+                <li id='date6'>
+                <span>August 2018</span>
+                    <p>
+                    - Fast forward one year; I decided to moved back to my Systems Administrator role to give me more time to focus on programming.
+                    </p>
+                </li>
+            </ul>
+        </div>`;
+    if (html.clientWidth < 750) {
+        toggleOff();
+    }
 });
 
 //Skills content
@@ -144,7 +150,9 @@ skillsNav.addEventListener('click', () => {
             <h3>Something</h3>
             <p>Some other text</p>
          </div>`;
-    toggleOff();
+    if (html.clientWidth < 750) {
+        toggleOff();
+    }
 });
 
 //Portfolio content
@@ -157,5 +165,7 @@ portNav.addEventListener('click', () => {
 
          <div id='pageContent'>
          </div>`;
-    toggleOff();
+    if (html.clientWidth < 750) {
+        toggleOff();
+    }
 });

@@ -31,7 +31,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+/* Headding styles */
+#pageHeading h1,
+#pageHeading h2 {
+    margin-bottom: 0;
+}
 /* Display main page wrappers as flex */
 #mainWrapper {
     margin: auto;
@@ -105,23 +109,15 @@ a {
 
 
 /* Add hover animations to navigation items */
+#mainNav img {
+    transition: .5s ease;
+}
+
 #mainNav img:hover {
     opacity: .5;
-    transition: .5s;
+    transition: .5s ease;
+    cursor: pointer;
 }
-
-.aboutLi a:hover {
-    animation: spinContent .5s;
-}
-
-.skillsLi a:hover {
-    animation: spinContent .5s;
-}
-
-.portLi a:hover {
-    animation: spinContent .5s;
-}
-
 /* Add margin to heading to add space between heading and navigation */
 #pageHeading {
     margin-left: 15%;
@@ -318,6 +314,19 @@ h2 {
     position: absolute;
     left: 0;
     bottom: 0;
+}
+/**** 
+   --- Media queries for larger windows ---
+****/
+@media (min-width: 750px) {
+    #mainNav ul {
+        display: flex;
+        margin: 0;
+    }
+    
+    #mainNav li {
+        
+    }
 }
 
 /* keyframes for various animations */
