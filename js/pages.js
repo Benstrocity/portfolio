@@ -90,7 +90,7 @@ aboutNav.addEventListener('click', () => {
     mainWrapper.innerHTML = `
         <heading id='pageHeading'>
             <h2>about me.</h2>
-         /heading>
+         </heading>
 
         <div id='pageContent'>
             <p id='aboutP'><span>It</span> started with a big dream and a desire to create a fulfilling life for myself and my family.</p>

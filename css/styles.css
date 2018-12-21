@@ -8,6 +8,7 @@ html {
     position: relative;
     box-sizing: border-box;
     box-sizing: padding-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -199,12 +200,12 @@ h2 {
     margin-top: 0;
 }
 /* This button/feature only displays with JavaScript */
-#colorChanger {
+#destruct {
     position: absolute;
     bottom: -25px;
 }
 
-#colorChanger button {
+#destruct button {
     border: none;
     padding: 5px;
     width: 125px;
@@ -213,7 +214,7 @@ h2 {
     transition: 0.5s ease;
 }
 
-#colorChanger button:hover {
+#destruct button:hover {
     opacity: .75;
     transition: .5s ease;
     cursor: pointer;
@@ -349,10 +350,25 @@ h2 {
 /**** 
    --- Media queries for larger windows ---
 ****/
-@media (min-width: 750px) {
-    #mainNav ul {
-        display: flex;
-        margin: 0;
+@media (min-width: 900px) {
+
+    .logoLi,
+    .homeLi,
+    .aboutLi,
+    .skillsLi,
+    .portLi {
+        margin: auto 45px auto 45px;
+    }
+
+    .logoLi img {
+        width: 75px;
+    }
+
+    .homeLi img,
+    .aboutLi img,
+    .skillsLi img,
+    .portLi img {
+        width: 35px;
     }
 }
 

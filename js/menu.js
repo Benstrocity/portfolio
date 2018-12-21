@@ -36,7 +36,7 @@ toggleMenu.addEventListener('click', () => {
 
 //Layout that loads based on screen size on first load
 window.addEventListener('load', () => {
-    if (html.clientWidth > 750) {
+    if (html.clientWidth > 550) {
         toggleOn();
         siteLogo.style.display = 'inline';
         siteLogo.style.animation = 'none';
@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
 });
 //Layout that loads based on screen size on resize
 window.addEventListener('resize', () => {
-    if (html.clientWidth > 750) {
+    if (html.clientWidth > 550) {
         toggleOn();
         siteLogo.style.display = 'inline';
         siteLogo.style.animation = 'fadeIn 1s';
