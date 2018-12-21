@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Slayer Tap</title>
+        <link href='css/styles.css' type='text/css' rel='stylesheet'>
+	</head>
+	<body>
+        <div id='gameWrapper'>
+            <div id='statsMenu'>
+                <div id='actionStats'>
+                    <p>Damage Dealt: <span id='totalDmg'></span></p>
+                    <p>Total Hits: <span id='totalHits'></span></p>
+                    
+                    <div id='upgWrapper'>
+                    <p id='upgMenu'>Upgrades:</p>
+                    <ul id='upgItems'>
+                        <li><span>Increase Damage x10</span><button id='dmgBtn'>Buy <br>(500 SP)</button></li>
+                        <li><span>Increase SP/Hit x5</span><button id='spBtn'>Buy <br>(500 SP)</button></li>
+                    </ul>
+                </div>
+                </div>
+                <div id='enemyStats'>
+                    <h3 id='enemyName'></h3>
+                    <p>Enemy Health: <span id='enemyHealth'></span></p>
+                </div>
+                <div id='levelStats'>
+                    <p>Current Level: <span id='gameLvl'></span></p>
+                    <p>Current Exp: <span id='plyrExp'></span></p>
+                    <p>Exp to Next Level: <span id='remExp'></span></p>
+                    <p>Slayer Points: <span id='sp'></span> sp</p>
+                </div>
+            </div>
+
+            <div id='enemyField'>
+
+            </div>
+
+            <div id='restartWrapper'>
+                <p id='restartGame'>Restart Game</p>
+            </div>
+        </div>
+        <script src='js/script.js' type='text/javascript'></script>
+	</body>
+</html>

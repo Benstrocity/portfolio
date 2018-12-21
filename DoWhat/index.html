@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+		<title></title>
+        <link rel="stylesheet" href="css/normalize.css" type="text/css">
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+	</head>
+	<body>
+        
+        <div class="main-wrapper">
+            <heading class="main-heading">
+                <h1><span>Do</span>What?</h1>
+            </heading>
+            
+            <div class="content-pos">
+                <div class="start">
+                    <a href="#"><p id="start-free">Free</p></a>
+                    <a href="#"><p id="start-out">Outdoors</p></a>
+                    <a href="#"><p id="start-food">Food</p></a>
+                    <a href="#"><p id="start-ent">Entertainment</p></a>
+                    <a href="#"><p id="start-any">Random</p></a>
+                </div>  
+                <div id="loading">
+                <!--Loading screen-->
+                    <img src="img/loading.gif">
+                    <p>Randomizing...</p>
+                </div>
+                <div id="output">
+                    <div id="do-what">
+                        <p id="para-output"></p>
+                    </div>
+
+                    <div id="refresh-app" onClick="updateReload()">
+                        <p id="refresh">&#8617;</p>
+                        <p id="click-reload"><span>Tap</span> to Start Over</p>
+                    </div>
+                </div>
+            </div>
+            <footer class="main-footer">
+            <p>&copy; 2018 <span>Ben</span> Youngblood</p>
+        </footer>
+        </div>
+        
+        <script src="js/game.js"></script>
+	</body>
+</html>

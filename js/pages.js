@@ -14,15 +14,14 @@ const portNav = document.querySelector('.portLi');
 //Home content
 logoNav.addEventListener('click', () => {
     profImg.style.display = 'none';
-    mainWrapper.innerHTML =
-        `<heading id='pageHeading'>
-                <h1>Ben.<br>making tomorrow brighter.</h1>
-            </heading>
+    mainWrapper.innerHTML = `
+        <heading id='pageHeading'>
+            <h1>Ben.<br>making tomorrow brighter.</h1>
+        </heading>
 
-            <div id='pageContent'>
-                <h3>Hi,</h3>
-                <p>Welcome to my portfolio website. Have a look around and reach out to me with any questions. Thank you for stopping by!</p>
-            </div>
+        <div id='pageContent'>
+            <h3>Hi,</h3>
+            <p>Welcome to my portfolio website. Have a look around and reach out to me with any questions. Thank you for stopping by!</p>
         </div>
         
         <div id='profileImage'>
@@ -41,7 +40,8 @@ logoNav.addEventListener('click', () => {
                     Developer
                 </li>
             </ul>
-        </div>`;
+        </div>
+        `;
     if (html.clientWidth < 750) {
         toggleOff();
     }
@@ -49,15 +49,14 @@ logoNav.addEventListener('click', () => {
 
 homeNav.addEventListener('click', () => {
     profImg.style.display = 'none';
-    mainWrapper.innerHTML =
-        `<heading id='pageHeading'>
-                <h1>Ben.<br>making tomorrow brighter.</h1>
-            </heading>
+    mainWrapper.innerHTML = `
+        <heading id='pageHeading'>
+            <h1>Ben.<br>making tomorrow brighter.</h1>
+        </heading>
 
-            <div id='pageContent'>
-                <h3>Hi,</h3>
-                <p>Welcome to my portfolio website. Have a look around and reach out to me with any questions. Thank you for stopping by!</p>
-            </div>
+        <div id='pageContent'>
+            <h3>Hi,</h3>
+            <p>Welcome to my portfolio website. Have a look around and reach out to me with any questions. Thank you for stopping by!</p>
         </div>
         
         <div id='profileImage'>
@@ -76,7 +75,8 @@ homeNav.addEventListener('click', () => {
                     Developer
                 </li>
             </ul>
-        </div>`;
+        </div>
+        `;
     if (html.clientWidth < 750) {
         toggleOff();
     }
@@ -87,12 +87,12 @@ homeNav.addEventListener('click', () => {
 //About content
 aboutNav.addEventListener('click', () => {
     profImg.style.display = 'none';
-    mainWrapper.innerHTML = 
-        `<heading id='pageHeading'>
+    mainWrapper.innerHTML = `
+        <heading id='pageHeading'>
             <h2>about me.</h2>
-         </heading>
+         /heading>
 
-         <div id='pageContent'>
+        <div id='pageContent'>
             <p id='aboutP'><span>It</span> started with a big dream and a desire to create a fulfilling life for myself and my family.</p>
             <ul id='dates'>
                 <li id='date1'>
@@ -104,7 +104,7 @@ aboutNav.addEventListener('click', () => {
                 <li id='date2'>
                     <span>August 2016</span>
                     <p>
-                    - I began working at a software development company in the support desk. This was a way to get my foot int he door of programming.
+                    - I began working at a software development company on the support desk. This was a way to get my foot int he door of programming.
                     </p>
                 </li>
                 <li id='date3'>
@@ -132,7 +132,8 @@ aboutNav.addEventListener('click', () => {
                     </p>
                 </li>
             </ul>
-        </div>`;
+        </div>
+        `;
     if (html.clientWidth < 750) {
         toggleOff();
     }
@@ -141,15 +142,24 @@ aboutNav.addEventListener('click', () => {
 //Skills content
 skillsNav.addEventListener('click', () => {
     profImg.style.display = 'none';
-    mainWrapper.innerHTML =
-        `<heading id='pageHeading'>
+    mainWrapper.innerHTML = `
+        <heading id='pageHeading'>
             <h2>skills.</h2>
-         </heading>
+        </heading>
 
-         <div id='pageContent'>
-            <h3>Something</h3>
-            <p>Some other text</p>
-         </div>`;
+        <div id='pageContent'>
+            <h3>HTML and CSS</h3>
+            <p>Most of my experience is with front end development. The three areas I work in the most are HTML, CSS, and
+            JavaScript. I have several apps I have built utilizing these three languages. I have started to work towards
+            utilizing more JavaScript and JavaScript based frameworks and libraries.</p>
+        </div>
+         
+        <div id='skillIcons'>
+            <img src='img/html.png' alt='HTML Symbol'/>
+            <img src='img/css.png' alt='HTML Symbol'/>
+            <img src='img/js.png' alt='HTML Symbol'/>
+        </div>
+        `;
     if (html.clientWidth < 750) {
         toggleOff();
     }
@@ -158,13 +168,17 @@ skillsNav.addEventListener('click', () => {
 //Portfolio content
 portNav.addEventListener('click', () => {
     profImg.style.display = 'none';
-    mainWrapper.innerHTML = 
-        `<heading id='pageHeading'>
+    mainWrapper.innerHTML = `
+        <heading id='pageHeading'>
             <h2>portfolio.</h2>
-         </heading>
+        </heading>
 
-         <div id='pageContent'>
-         </div>`;
+        <div id='pageContent' class='portImages'>
+            <img id='va' src='img/virtualassistant.png' alt='Virtual Assistant App'/>
+            <img id='dw' src='img/dowhat.png' alt='DoWhat App'/>
+            <img id='st' src='img/slayertap.png' alt='Slayer Tap App'/>
+        </div>
+        `;
     if (html.clientWidth < 750) {
         toggleOff();
     }

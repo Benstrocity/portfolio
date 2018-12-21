@@ -1,0 +1,219 @@
+html {
+    box-sizing: border-box;
+    box-sizing: padding-box;
+    font-family: Arial, sans-serif;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.appWindow {
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto;
+    max-width: 250px;
+    min-width: 250px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px, -2px 0 15px #000;
+    overflow: hidden;
+    position: relative;
+}
+
+.appInput {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 50%;
+    background-color: white;
+    padding: 5%;
+    box-shadow: 5px 5px 20px, -5px 0 20px #000;
+    border-radius: 15px;
+}
+
+.appSettingsIcon {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+}
+
+.appSettingsIcon img {
+    width: 10%;
+}
+
+#settingsMenu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px, -5px 0 15px #000;
+    width: 75%;
+    align-self: center;
+    top: 15%;
+    height: 300px;
+    overflow-y: auto;
+    position: absolute;
+}
+
+#settingsMenu::-webkit-scrollbar {
+    display: none !important;
+}
+
+#settingsMenu h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+#styleSelect p {
+    margin-bottom: 0;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+#styleSelect {
+    text-align: center;
+    padding: 5px;
+}
+
+#styleSelect option {
+    height: 50px;
+}
+
+#trimColor,
+#bgColor,
+#messageColor,
+#buttonColor,
+#textColor {
+    font-size: .75rem;
+    width: 40%;
+}
+
+#settingButtons {
+    margin: 3% auto auto auto;
+    text-align: center;
+}
+
+#confirmSettings {
+    font-size: .75rem;
+    border-radius: 5px;
+    background-color: chocolate;
+    border: none;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+#resetSettings {
+    font-size: .75rem;
+    border-radius: 5px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+}
+
+.userInput {
+    display: flex;
+    align-self: center;
+    position: absolute;
+    bottom: 1%;
+}
+
+#appHead {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 45px;
+    background-color: chocolate;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#appTime {
+    font-size: .75rem;
+    color: #fff;
+}
+
+#appAssistant {
+    margin: 0;
+}
+
+#userName {
+    border: 1px solid chocolate;
+    height: 20px;
+    padding-left: 2%;
+    margin-bottom: 10%;
+}
+
+#assistantName {
+    border: 1px solid chocolate;
+    height: 20px;
+    padding-left: 2%;
+}
+
+#appStartButton {
+    color: #fff;
+    width: 50%;
+    align-self: center;
+    background-color: chocolate;
+    border: none;
+    height: 30px;
+}
+
+#appVer {
+    font-size: .75rem;
+    text-align: center;
+    display: block;
+    margin-top: 5%;
+    margin-bottom: -5%;
+    
+}
+
+.appInteract {
+    display: flex;
+    flex-direction: column;
+    max-height: 420px;
+    overflow-y: scroll;
+}
+
+.appInteract::-webkit-scrollbar {
+    display: none !important;
+}
+
+.appResponse {
+    display: none;
+    font-size: .85rem;
+    width: 55%;
+    margin-left: 2%;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 2%;
+    margin-bottom: 0;
+}
+
+.appQuestion {
+    display: none;
+    align-self: flex-end;
+    font-size: .85rem;
+    width: 55%;
+    margin-right: 2%;
+    background-color: chocolate;
+    border-radius: 10px;
+    padding: 2%;
+    margin-bottom: 0;
+}
+
+#appText {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding-left: 2%;
+    min-height: 20px;
+}
+
+#appSendButton {
+    border-radius: 5px;
+    background-color: chocolate;
+    border: none;
+    color: #fff;
+    min-height: 20px;
+    margin-left: 5px;
+}

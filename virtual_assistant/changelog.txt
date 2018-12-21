@@ -1,0 +1,33 @@
+v0.1.0 Update - 11/22/2018
+- Assistant will now respond to 'hello'
+- Assistant has a default response to unknown questions
+- New questions will now populate on a new line
+
+v0.2.0 Update - 11/24/2018
+- Added local time to top of app
+- Messages no longer flow off of the page
+- New messages automatically cause the screen to scroll to the bottom
+- The assistant will now respond to questions about time, your name, and their name
+- minor UI styling changes
+
+v0.3.0 Update - 11/26/2018
+- Added ability to press 'Enter' on the keyboard to send input
+- Updated clock in app to use non military time
+- Updated code so that there is a leading '0' for the minutes on the clock
+- Added settings icon to UI
+- Added settings menu feature. Non functional as of v0.3.0
+- Added 'Help' response from assistant when 'help' is typed
+- Added placeholder for Virtual Assistant's name
+- Added new question/response options: "Good morning", "Good evening", "Good after noon", and "How are you"
+- Asking "How are you" introduces a new feature. Randomized responses from your assistant
+
+v0.3.1 Patch - 11/26/2018
+- Fixed issue with built in clock not updated automatically
+
+v0.4.0 Update - 11/27/2018
+- The settings menu is now fully functional so that the apps color scheme can be modified
+- Updated assistants responses to accept additional key words
+
+v0.4.1 Patch - 11/28/2018
+- Update to auto scrolling. The message window will now auto scroll completely down to the newest response from the assistant
+- Update to settings menu. 'Cancel' button changed to 'Reset'. Resets settings to default. (Current issue with clearing the message bubble settings)
