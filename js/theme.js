@@ -24,7 +24,7 @@ const newDestroy = () => {
 }
 
 /* This event handler initializes the websites destruction */
-themeButton.addEventListener('click', () => {
+destructButton.addEventListener('click', () => {
     /* Call newDestroy function */
     newDestroy();
 });

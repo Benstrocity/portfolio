@@ -14,8 +14,12 @@ html {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: rgb(235,235,235);
-    color: #171717;
+    background-color: #00bff3;
+    background-image: url('../img/background_light.png');
+    background-size: stretch;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: #000000 ;
     margin-bottom: 150px;
 }
 /* Remove padding from unordered list tags */
@@ -45,15 +49,16 @@ a {
 /* Cross site navigation styles */
 #mainNav {
     display: flex;
-    background-color: lightgray;
+    background-color: #505050;
     z-index: 2;
     height: 100px;
-    box-shadow: 2px 0 10px;
+    box-shadow: 2px 0 10px #505050;
     position: relative;
 }
 
 .logoLi img {
     width: 25%;
+    opacity: .5;
     border-radius: 25%;
     transition: .5s;
 }
@@ -76,6 +81,10 @@ a {
     width: 25px;
 }
 
+#toggle img:hover {
+    cursor: pointer;
+}
+
 #mainNav li {
     padding: 0 15px 0 15px;
 }
@@ -92,33 +101,72 @@ a {
     width: 50px;
 }
 
+.logoLi img {
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: .5s ease;
+}
+
 .homeLi img {
     width: 30px;
+    animation: fadeIn .5s;
 }
 
 .aboutLi img {
     width: 30px;
+    animation: fadeIn .5s;
 }
 
 .skillsLi img {
     width: 30px;
+    animation: fadeIn .5s;
 }
 
 .portLi img {
     width: 30px;
+    animation: fadeIn .5s;
 }
-
 
 /* Add hover animations to navigation items */
-#mainNav img {
-    transition: .5s ease;
+#homeHov,
+#aboutHov,
+#skillsHov,
+#portHov {
+    display: none;
+    cursor: pointer;
+    animation: fadeIn .5s;
 }
 
-#mainNav img:hover {
-    opacity: .5;
+.logoLi img:hover {
+    opacity: 1;
     transition: .5s ease;
     cursor: pointer;
 }
+
+.homeLi img:hover {
+    cursor: pointer;
+    animation: fadeOut .5s;
+    cursor: pointer;
+}
+
+.aboutLi img:hover {
+    cursor: pointer;
+    animation: fadeOut .5s;
+    cursor: pointer;
+}
+
+.skillsLi img:hover {
+    cursor: pointer;
+    animation: fadeOut .5s;
+    cursor: pointer;
+}
+
+.portLi img:hover {
+    cursor: pointer;
+    animation: fadeOut .5s;
+    cursor: pointer;
+}
+
 /* Add margin to heading to add space between heading and navigation */
 #pageHeading {
     margin-left: 15%;
@@ -143,6 +191,36 @@ h2 {
     -webkit-animation: slideInContent 2s;
     animation: slideInContent 2s;
 }
+
+/* Main Footer Styles */
+#mainFooter {
+    background-color: #505050;
+    color: rgb(255,255,255);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#footerSect1 ul {
+    text-align: center;
+}
+
+#footerSect1 li:hover {
+    cursor: pointer;
+}
+
+#footerSect2,
+#footerSect3 {
+    text-align: center;
+    margin: 15px 0 15px 0;
+}
+
+#footerSect3 img {
+    width: 30px;
+    margin: 0 15px 0 15px;
+}
+
 /**** 
    --- Home Page styles ---
 ****/
@@ -156,15 +234,19 @@ h2 {
 
 #profileImage {
     text-align: center;
-    margin: auto auto 50px auto;
+    margin: auto auto 400px auto;
     padding-bottom: 15px;
     width: 75%;
-    max-width: 400px;
+    max-width: 300px;
     min-width: 200px;
     border-radius: 15%;
-    box-shadow: 5px 5px 15px #171717;
-    background-color: #171717;
+    box-shadow: 5px 5px 15px #505050;
+    background-color: #505050;
     animation: dropInContent 2s; /* Animate on page load */
+}
+
+#profileImage img {
+    filter: grayscale(100%);
 }
 
 #profileImage ul {
@@ -233,10 +315,12 @@ h2 {
 
 
 #dates {
-    margin-bottom: 65px;
+    margin-bottom: 300px;
 }
 
 #dates li {
+    background-color: #505050;
+    color: rgb(255,255,255);
     margin-bottom: 15px;
     min-height: 5rem;
     max-width: 500px;
@@ -251,71 +335,47 @@ h2 {
 }
 
 #date1 {
-    background-color: #171717;
-    color: rgb(255,255,255);
     padding: 15px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: fadeIn 1s;
+    animation: slideFromRight 1s;
 }
 
 #date2 {
-    background-color: #171717;
-    color: rgb(255,255,255);
     padding: 15px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: fadeIn 2s;
+    animation: slideFromLeft 1s;
 }
 
 #date3 {
-    background-color: #171717;
-    color: rgb(255,255,255);
     padding: 15px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: fadeIn 3s;
+    animation: slideFromRight 1s;
 }
 
 #date4 {
-    background-color: #171717;
-    color: rgb(255,255,255);
     padding: 15px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: fadeIn 4s;
+    animation: slideFromLeft 1s;
 }
 
 #date5 {
-    background-color: #171717;
-    color: rgb(255,255,255);
     padding: 15px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: fadeIn 5s;
+    animation: slideFromRight 1s;
 }
 
 #date6 {
-    background-color: #171717;
-    color: rgb(255,255,255);
     padding: 15px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: fadeIn 6s;
+    animation: slideFromLeft 1s;
 }
 
-/* Main Footer Styles */
-#mainFooter {
-    background-color: #171717;
-    color: rgb(255,255,255);
-    text-align: center;
-    font-size: .8rem;
-    width: 100%;
-    padding: 25px 0 25px 0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
 /**** 
    --- Skills Page styles ---
 ****/
@@ -327,14 +387,28 @@ h2 {
 #skillIcons img {
     width: 85px;
     height: 85px;
+    margin: 0 35px 0 35px;
 }
+
+#html {
+    animation: slideFromLeft 1.5s;
+}
+
+#css {
+    animation: fadeIn 1.5s;
+}
+
+#js {
+    animation: slideFromRight 1.5s;
+}
+
 /**** 
    --- Portfolio Page styles ---
 ****/
-.portImages {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.virtualAssistant,
+.doWhat,
+.slayerTap {
+    text-align: center;
 }
 
 #va,
@@ -346,12 +420,62 @@ h2 {
     widtH: 500px;
 }
 
+.portProj {
+    text-align: left;
+}
+
+.portProj span {
+    font-weight: bold;
+}
+
+.portProj:last-of-type {
+    margin-bottom: 400px;
+}
 
 /**** 
    --- Media queries for larger windows ---
 ****/
-@media (min-width: 900px) {
+@media (min-width: 750px) {
+    #mainFooter {
+        display: flex;
+        justify-content: center;
+    }
 
+    #footerSect1,
+    #footerSect3 {
+        display: flex;
+        margin: 0 35px 0 35px;
+        align-items: center;
+    }
+
+    #footerSect2 {
+        margin: 0 35px 0 35px;
+    }
+
+    #footerSect3 img {
+        width: 30px;
+        margin: 0 5px 0 5px;
+    }
+
+    #footerSect3 img:hover {
+        cursor: pointer;
+    }
+
+    /* Portfolio styles */
+    .virtualAssistant,
+    .doWhat,
+    .slayerTap {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .projContent {
+        margin-left: 50px;
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 900px) {
     .logoLi,
     .homeLi,
     .aboutLi,
