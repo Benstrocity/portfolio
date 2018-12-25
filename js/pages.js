@@ -158,6 +158,7 @@ skillsNav.addEventListener('click', () => {
             <img id='html' src='img/html.png' alt='HTML5 Symbol'/>
             <img id='css' src='img/css.png' alt='CSS3 Symbol'/>
             <img id='js' src='img/js.png' alt='JavaScript Symbol'/>
+            <img id='ps' src='img/photoshop.png' alt='PhotoShop Symbol'/>
         </div>
         `;
     if (html.clientWidth < 750) {
@@ -180,12 +181,12 @@ portNav.addEventListener('click', () => {
 
             <div class='projContent'>
                 <h2>Virtual Assistant</h2>
-                <p><span>The Reason: </span>This application was built to practice and showcase skills in JavaScript.
+                <p><span>The Reason</span><br>This application was built to practice and showcase skills in JavaScript.
                 This app allowed me to create something that relied entirely on user interaction.</p>
-                <p><span>The Lesson: </span>I learned a great deal about creating something that could be customized by 
+                <p><span>The Lesson</span><br>I learned a great deal about creating something that could be customized by 
                 the user. I learned that user experience is something that can be difficult to maintain while still trying to do something 
                 unique.</p>
-                <p><span>The Success: </span>This app is easy to understand and the interface is clean and familiar. The 
+                <p><span>The Success</span><br>This app is easy to understand and the interface is clean and familiar. The 
                 user has control over the color pallet and is free to interact with the virtual assistant in any way they wish. 
 
             </div>
@@ -198,12 +199,12 @@ portNav.addEventListener('click', () => {
             
             <div class='projContent'>
                 <h2>DoWhat</h2>
-                <p><span>The Reason: </span>This is the first web application I built. It's a simple application that 
+                <p><span>The Reason</span><br>This is the first web application I built. It's a simple application that 
                 allows for a bit of fun user interaction. I wanted to create an engaging application even though I did 
                 not have as much experience at the time with JavaScript and DOM manipulation.
-                <p><span>The Lesson: </span>I learned a great deal about conditional statements by creating this app. It
+                <p><span>The Lesson</span><br>I learned a great deal about conditional statements by creating this app. It
                 also allowed me to understand the basics of UX.</p>
-                <p><span>The Success: </span>This app functions really well and gives users an action to take. It successfully 
+                <p><span>The Success</span><br>This app functions really well and gives users an action to take. It successfully 
                 goes beyond an open it and close it app; it challenges the user to do something outside of the app without leading 
                 them away from the idea of the app.</p>
             </div>
@@ -216,15 +217,15 @@ portNav.addEventListener('click', () => {
         
             <div class='projContent'>
                 <h2>Slayer Tap</h2>
-                <p><span>The Reason: </span>I wanted to do something that involved more variables and more functions. Slayer Tap dives
+                <p><span>The Reason</span><br>I wanted to do something that involved more variables and more functions. Slayer Tap dives
                 heavily into UI and UX by giving users a larger deal of functionality. This also allowed me to grow my knowledge in 
                 photoshop design, more complex functions, and larger conditionals.
-                <p><span>The Lesson: </span>The layout was very difficult to manipulate due to lack of focus on UI first. My goal 
+                <p><span>The Lesson</span><br>The layout was very difficult to manipulate due to lack of focus on UI first. My goal 
                 going into this was functionality first and UI second. I no longer think this way; the layout and design heading 
                 the development makes for an easier time in the polishing phase and programming phase of the app.
-                <p><span>The Success: </span></p>The app style came out nicely and it functions exactly how I envisoned it 
+                <p><span>The Success</span><br>The app style came out nicely and it functions exactly how I envisoned it 
                 when I was drawing the idea out on my whiteboard. This was also a lot of fun to create and really helped me to solidify
-                my passion for design and fun UX.
+                my passion for design and fun UX.</p>
             </div>
         </div>
         `;

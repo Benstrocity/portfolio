@@ -62,28 +62,3 @@ window.addEventListener('resize', () => {
         toggleMenu.style.display = 'inline';
     }
 });
-
-const homeLi = document.querySelector('.homeLi img');
-const aboutLi = document.querySelector('.aboutLi img');
-const skillsLi = document.querySelector('.skillsLi img');
-const portLi = document.querySelector('.portLi img');
-const homeHov = document.querySelector('#homeHov');
-const aboutHov = document.querySelector('#aboutHov');
-const skillsHov = document.querySelector('#skillsHov');
-const portHov = document.querySelector('#portHov');
-const navArr = [homeLi, aboutLi, skillsLi, portLi];
-const hovArr = [homeHov, aboutHov, skillsHov, portHov];
-
-for ( let i = 0; i < navArr.length; i++ ) {
-    if (html.clientWidth > 550) {
-        navArr[i].addEventListener('mouseenter', () => {
-            navArr[i].style.display = 'none';
-            hovArr[i].style.display = 'inline';
-
-            hovArr[i].addEventListener('mouseleave', () => {
-                hovArr[i].style.display = 'none';
-                navArr[i].style.display = 'inline';
-            });
-        });
-    }
-}

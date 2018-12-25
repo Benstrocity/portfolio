@@ -13,7 +13,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'ZCOOL QingKe HuangYou', Arial, sans-serif;
     background-color: #00bff3;
     background-image: url('../img/background_light.png');
     background-size: stretch;
@@ -40,6 +40,7 @@ a {
 #pageHeading h1,
 #pageHeading h2 {
     margin-bottom: 0;
+    font-size: 3rem;
 }
 /* Display main page wrappers as flex */
 #mainWrapper {
@@ -99,6 +100,7 @@ a {
 .portLi {
     text-align: center;
     width: 50px;
+    color: #ffffff;
 }
 
 .logoLi img {
@@ -110,32 +112,28 @@ a {
 .homeLi img {
     width: 30px;
     animation: fadeIn .5s;
+    transition: .5s ease;
 }
 
 .aboutLi img {
     width: 30px;
     animation: fadeIn .5s;
+    transition: .5s ease;
 }
 
 .skillsLi img {
     width: 30px;
     animation: fadeIn .5s;
+    transition: .5s ease;
 }
 
 .portLi img {
     width: 30px;
     animation: fadeIn .5s;
+    transition: .5s ease;
 }
 
 /* Add hover animations to navigation items */
-#homeHov,
-#aboutHov,
-#skillsHov,
-#portHov {
-    display: none;
-    cursor: pointer;
-    animation: fadeIn .5s;
-}
 
 .logoLi img:hover {
     opacity: 1;
@@ -144,26 +142,26 @@ a {
 }
 
 .homeLi img:hover {
-    cursor: pointer;
-    animation: fadeOut .5s;
+    opacity: .5;
+    transition: .5s ease;
     cursor: pointer;
 }
 
 .aboutLi img:hover {
-    cursor: pointer;
-    animation: fadeOut .5s;
+    opacity: .5;
+    transition: .5s ease;
     cursor: pointer;
 }
 
 .skillsLi img:hover {
-    cursor: pointer;
-    animation: fadeOut .5s;
+    opacity: .5;
+    transition: .5s ease;
     cursor: pointer;
 }
 
 .portLi img:hover {
-    cursor: pointer;
-    animation: fadeOut .5s;
+    opacity: .5;
+    transition: .5s ease;
     cursor: pointer;
 }
 
@@ -190,6 +188,8 @@ h2 {
     margin-right: 2%;
     -webkit-animation: slideInContent 2s;
     animation: slideInContent 2s;
+    font-size: 1.25rem;
+    z-index: -1;
 }
 
 /* Main Footer Styles */
@@ -204,10 +204,22 @@ h2 {
 
 #footerSect1 ul {
     text-align: center;
+    font-size: 1.25rem;
+}
+
+#footerSect1 li {
+    transition: .5s ease;
+    padding-bottom: 5px;
 }
 
 #footerSect1 li:hover {
     cursor: pointer;
+    opacity: .5;
+    transition: .5s ease;
+}
+
+#footerSect2 {
+    font-size: 1.25rem;
 }
 
 #footerSect2,
@@ -224,10 +236,6 @@ h2 {
 /**** 
    --- Home Page styles ---
 ****/
-#pageContent {
-    z-index: -1;
-}
-
 #pageContent h3 {
     margin-top: 0;
 }
@@ -256,6 +264,10 @@ h2 {
 
 #profileImage li {
     padding: 0 5px 0 5px;
+}
+
+#profileImage span {
+    font-size: 1.25rem;
 }
 
 #profile {
@@ -311,11 +323,13 @@ h2 {
 
 #aboutP span {
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 
 #dates {
     margin-bottom: 300px;
+    font-size: 1.25rem;
 }
 
 #dates li {
@@ -382,6 +396,7 @@ h2 {
 #skillIcons {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #skillIcons img {
@@ -395,10 +410,14 @@ h2 {
 }
 
 #css {
-    animation: fadeIn 1.5s;
+    animation: dropInContent 1.5s;
 }
 
 #js {
+    animation: flyUpContent 1.5s;
+}
+
+#ps {
     animation: slideFromRight 1.5s;
 }
 
@@ -424,6 +443,10 @@ h2 {
     text-align: left;
 }
 
+.portProj p {
+    font-size: 1.25rem;
+}
+
 .portProj span {
     font-weight: bold;
 }
@@ -439,13 +462,13 @@ h2 {
     #mainFooter {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     #footerSect1,
     #footerSect3 {
         display: flex;
         margin: 0 35px 0 35px;
-        align-items: center;
     }
 
     #footerSect2 {
@@ -454,7 +477,7 @@ h2 {
 
     #footerSect3 img {
         width: 30px;
-        margin: 0 5px 0 5px;
+        margin: 0 15px 0 15px;
     }
 
     #footerSect3 img:hover {
@@ -579,6 +602,20 @@ h2 {
 @-webkit-keyframes dropInContent {
     from {opacity: 0;
           transform: translateY(-20px);}
+    to {opacity: 1;
+        transform: translateY(0);}
+}
+
+@keyframes flyUpContent {
+    from {opacity: 0;
+          transform: translateY(20px);}
+    to {opacity: 1;
+        transform: translateY(0);}
+}
+
+@-webkit-keyframes flyUpContent {
+    from {opacity: 0;
+          transform: translateY(20px);}
     to {opacity: 1;
         transform: translateY(0);}
 }
