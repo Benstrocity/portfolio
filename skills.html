@@ -1,8 +1,77 @@
-<heading id='pageHeading'>
-    <h2>skills.</h2>
-</heading>
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ben's Portfolio</title>
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+        <link href='css/styles.css' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+        <nav id='mainNav'>
+            <ul>
+                <li class ='logoLi'><a href='index.html'><img src='img/logo.png' alt='Image of Ben'></a></li>
+                <span id='toggle'></span>
+                <span id='toggleItems'>
+                    <a href='index.html'><li class='navLi homeLi'><img src='img/homeIcon.png' alt='Home menu icon'><span>home</span></li></a>
+                    <a href='about.html'><li class='navLi aboutLi'><img src='img/aboutIcon.png' alt='Skills menu icon'><span>about</span></li></a>
+                    <a href='skills.html'><li class='navLi skillsLi'><img src='img/skills.png' alt='Skills menu icon'><span>skills</span></li></a>
+                    <a href='portfolio.html'><li class='navLi portLi'><img src='img/portIcon.jpg.png' alt='Portfolio menu icon'><span>portfolio</span></li></a>
+                </span>
+            </ul>
+            <div id='destruct'>
+                <!--JavaScript theme change-->
+                <!--If JavaScript not available, code will not display and default theme will load-->
+            </div>
+        </nav>
+        
+        <div id='mainWrapper'>
+            <heading id='pageHeading'>
+                <h2>skills.</h2>
+            </heading>
+        
+            <div id='pageContent'>
+                <h3>HTML and CSS</h3>
+                <p>Most of my experience is with front end development. The three areas I work in the most are HTML, CSS, and
+                JavaScript. I have several apps I have built utilizing these three languages. I have started to work towards
+                utilizing more JavaScript and JavaScript based frameworks and libraries.</p>
+            </div>
+                
+            <div id='skillIcons'>
+                <img id='html' src='img/html.png' alt='HTML5 Symbol'/>
+                <img id='css' src='img/css.png' alt='CSS3 Symbol'/>
+                <img id='js' src='img/js.png' alt='JavaScript Symbol'/>
+                <img id='ps' src='img/photoshop.png' alt='PhotoShop Symbol'/>
+            </div>
+        </div>
 
-<div id='pageContent'>
-    <h3>Something</h3>
-    <p>Some other text</p>
-</div>
+        <footer id='mainFooter'>
+            <div id='footerSect1'>
+                <ul>
+                    <a href='index.html'><li class='footHomeLi'>home</li></a>
+                    <a href='about.html'><li class='footAboutLi'>about</li></a>
+                    <a href='skills.html'><li class='footSkillsLi'>skills</li></a>
+                    <a href='portfolio.html'><li class='footPortLi'>portfolio</li></a>
+                </ul>
+            </div>
+
+            <div id='footerSect2'>
+                <span>Ben Youngblood</span>
+                <br>
+                <p id='footDesc'>A developer from Central Arkansas always looking for great opportunities and working towards
+                    growing into a better husband, developer, and friend.
+                </p>
+            </div>
+                
+            <div id='footerSect3'>
+                <a href='https://www.linkedin.com/in/benjamin-youngblood-5824bbb0' target='_blank'><img src='img/linkedin.png' alt='LinkedIn Icon'></a>
+                <a href='https://github.com/Benstrocity' target='_blank'><img src='img/github.png' alt='github icon'></a>
+                <a href='mailto:byoungblood.c@gmail.com'><img src='img/email.png' alt='Email icon'></a>
+            </div>
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src='js/theme.js'></script>
+        <script src='js/menu.js'></script>
+	</body>
+</html>

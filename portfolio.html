@@ -1,6 +1,120 @@
-<heading id='pageHeading'>
-    <h2>portfolio.</h2>
-</heading>
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ben's Portfolio</title>
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+        <link href='css/styles.css' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+        <nav id='mainNav'>
+            <ul>
+                <li class ='logoLi'><a href='index.html'><img src='img/logo.png' alt='Image of Ben'></a></li>
+                <span id='toggle'></span>
+                <span id='toggleItems'>
+                    <a href='index.html'><li class='navLi homeLi'><img src='img/homeIcon.png' alt='Home menu icon'><span>home</span></li></a>
+                    <a href='about.html'><li class='navLi aboutLi'><img src='img/aboutIcon.png' alt='Skills menu icon'><span>about</span></li></a>
+                    <a href='skills.html'><li class='navLi skillsLi'><img src='img/skills.png' alt='Skills menu icon'><span>skills</span></li></a>
+                    <a href='portfolio.html'><li class='navLi portLi'><img src='img/portIcon.jpg.png' alt='Portfolio menu icon'><span>portfolio</span></li></a>
+                </span>
+            </ul>
+            <div id='destruct'>
+                <!--JavaScript theme change-->
+                <!--If JavaScript not available, code will not display and default theme will load-->
+            </div>
+        </nav>
+        
+        <div id='mainWrapper'>
+            <heading id='pageHeading'>
+                <h2>portfolio.</h2>
+            </heading>
+            
+            <div class='portProj virtualAssistant'>
+                <div class='projImg'>
+                    <img id='va' src='img/virtualassistant.png' alt='Virtual Assistant App'/>
+                </div>
+    
+                <div class='projContent'>
+                    <h2>Virtual Assistant</h2>
+                    <p><span>The Reason</span><br>This application was built to practice and showcase skills in JavaScript.
+                    This app allowed me to create something that relied entirely on user interaction.</p>
+                    <p><span>The Lesson</span><br>I learned a great deal about creating something that could be customized by 
+                    the user. I learned that user experience is something that can be difficult to maintain while still trying to do something 
+                    unique.</p>
+                    <p><span>The Success</span><br>This app is easy to understand and the interface is clean and familiar. The 
+                    user has control over the color pallet and is free to interact with the virtual assistant in any way they wish.</p>
+                    <a href='https://github.com/Benstrocity/virtual-assistant' target='_blank'><button>View on GitHub</button></a>
+                </div>
+            </div>
+            <hr>
+            <div class='portProj doWhat'>
+                <div class='projImg'>
+                    <img id='dw' src='img/dowhat.png' alt='DoWhat App'/>
+                </div>
+                
+                <div class='projContent'>
+                    <h2>DoWhat</h2>
+                    <p><span>The Reason</span><br>This is the first web application I built. It's a simple application that 
+                    allows for a bit of fun user interaction. I wanted to create an engaging application even though I did 
+                    not have as much experience at the time with JavaScript and DOM manipulation.
+                    <p><span>The Lesson</span><br>I learned a great deal about conditional statements by creating this app. It
+                    also allowed me to understand the basics of UX.</p>
+                    <p><span>The Success</span><br>This app functions really well and gives users an action to take. It successfully 
+                    goes beyond an open it and close it app; it challenges the user to do something outside of the app without leading 
+                    them away from the idea of the app.</p>
+                    <a href='https://github.com/Benstrocity/dowhat' target='_blank'><button>View on GitHub</button></a>
+                </div>
+            </div>
+            <hr>
+            <div class='portProj slayerTap'>
+                <div class='projImg'>    
+                    <img id='st' src='img/slayertap.png' alt='Slayer Tap App'/>
+                </div>
+            
+                <div class='projContent'>
+                    <h2>Slayer Tap</h2>
+                    <p><span>The Reason</span><br>I wanted to do something that involved more variables and more functions. Slayer Tap dives
+                    heavily into UI and UX by giving users a larger deal of functionality. This also allowed me to grow my knowledge in 
+                    photoshop design, more complex functions, and larger conditionals.
+                    <p><span>The Lesson</span><br>The layout was very difficult to manipulate due to lack of focus on UI first. My goal 
+                    going into this was functionality first and UI second. I no longer think this way; the layout and design heading 
+                    the development makes for an easier time in the polishing phase and programming phase of the app.
+                    <p><span>The Success</span><br>The app style came out nicely and it functions exactly how I envisoned it 
+                    when I was drawing the idea out on my whiteboard. This was also a lot of fun to create and really helped me to solidify
+                    my passion for design and fun UX.</p>
+                    <a href='https://github.com/Benstrocity/slayer-tap' target='_blank'><button>View on GitHub</button></a>
+                </div>
+            </div>
+        </div>
 
-<div id='pageContent'>
-</div>
+        <footer id='mainFooter'>
+            <div id='footerSect1'>
+                <ul>
+                    <a href='index.html'><li class='footHomeLi'>home</li></a>
+                    <a href='about.html'><li class='footAboutLi'>about</li></a>
+                    <a href='skills.html'><li class='footSkillsLi'>skills</li></a>
+                    <a href='portfolio.html'><li class='footPortLi'>portfolio</li></a>
+                </ul>
+            </div>
+
+            <div id='footerSect2'>
+                <span>Ben Youngblood</span>
+                <br>
+                <p id='footDesc'>A developer from Central Arkansas always looking for great opportunities and working towards
+                    growing into a better husband, developer, and friend.
+                </p>
+            </div>
+                
+            <div id='footerSect3'>
+                <a href='https://www.linkedin.com/in/benjamin-youngblood-5824bbb0' target='_blank'><img src='img/linkedin.png' alt='LinkedIn Icon'></a>
+                <a href='https://github.com/Benstrocity' target='_blank'><img src='img/github.png' alt='github icon'></a>
+                <a href='mailto:byoungblood.c@gmail.com'><img src='img/email.png' alt='Email icon'></a>
+            </div>
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src='js/theme.js'></script>
+        <script src='js/menu.js'></script>
+	</body>
+</html>
