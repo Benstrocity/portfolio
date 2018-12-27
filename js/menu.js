@@ -45,7 +45,10 @@ window.addEventListener('load', () => {
         toggleMenu.style.display = 'none';
     } else {
         toggleOff()
-        toggleMenu.style.display = 'inline';
+        toggleItems.style.display = 'none';
+        toggleMenu.style.display = 'block';
+        toggleMenu.style.position = 'absolute';
+        toggleMenu.style.right = '15px';
     }
 });
 //Layout that loads based on screen size on resize
@@ -59,6 +62,9 @@ window.addEventListener('resize', () => {
         toggleMenu.style.display = 'none';
     } else {
         toggleOff();
+        toggleItems.style.display = 'none';
         toggleMenu.style.display = 'inline';
+        toggleMenu.style.position = 'absolute';
+        toggleMenu.style.right = '15px';
     }
 });

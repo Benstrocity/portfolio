@@ -22,11 +22,6 @@ body {
     color: #000000 ;
 }
 
-header {
-    margin: 15px auto 15px auto;
-    width: 85%;
-}
-
 hr {
     height: 3px;
     border: none;
@@ -64,6 +59,11 @@ a {
     margin: auto auto 400px auto;
     width: 85%;
 }
+
+header {
+    margin: 15px 0 15px 0;
+}
+
 /* Cross site navigation styles */
 #mainNav {
     display: flex;
@@ -74,12 +74,6 @@ a {
     position: relative;
 }
 
-.logoLi img {
-    width: 25%;
-    opacity: .5;
-    border-radius: 25%;
-    transition: .5s;
-}
 /* Add padding to separate nav items */
 #mainNav ul {
     display: flex;
@@ -108,7 +102,7 @@ a {
 }
 
 #toggleItems {
-    display: none;
+    display: flex;
 }
 
 .homeLi,
@@ -123,6 +117,12 @@ a {
 .logoLi img {
     cursor: pointer;
     transition: .5s ease;
+    opacity: .5;
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    border-radius: 25%;
+    width: 50px;
 }
 
 .homeLi img {
@@ -310,7 +310,6 @@ h2 {
 #devImg {
     width: 20px;
 }
-
 
 #profileImage ul {
     color: rgb(255,255,255);
@@ -506,7 +505,11 @@ h2 {
 /**** 
    --- Media queries for larger windows ---
 ****/
-@media (min-width: 750px) {
+@media (min-width: 700px) {
+    .logoLi img {
+        top: 25px;
+    }
+
     #pageContent {
         max-width: 50%;
     }
@@ -574,7 +577,6 @@ h2 {
         right: 45%;
     }
 
-    .logoLi,
     .homeLi,
     .aboutLi,
     .skillsLi,
@@ -584,6 +586,7 @@ h2 {
 
     .logoLi img {
         width: 75px;
+        top: 13px;
     }
 
     .homeLi img,
