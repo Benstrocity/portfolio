@@ -19,7 +19,7 @@ body {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    color: #000000 ;
+    color: #000000;
 }
 
 hr {
@@ -315,7 +315,7 @@ h2 {
     color: rgb(255,255,255);
     margin-top: 0;
 }
-/* This button/feature only displays with JavaScript */
+/* These buttons/features only display with JavaScript */
 #destruct {
     position: absolute;
     right: 5px;
@@ -334,6 +334,29 @@ h2 {
 }
 
 #destruct button:hover {
+    opacity: .75;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+#repair {
+    position: absolute;
+    right: 5px;
+    bottom: -50px;
+}
+
+#repair button {
+    border: none;
+    padding: 5px;
+    width: 125px;
+    height: 30px;
+    border-radius: 5px;
+    color: rgb(255,255,255);
+    background-color: #00bff3;
+    transition: 0.5s ease;
+}
+
+#repair button:hover {
     opacity: .75;
     transition: .5s ease;
     cursor: pointer;
@@ -573,7 +596,8 @@ h2 {
 }
 
 @media (min-width: 900px) {
-    #destruct {
+    #destruct,
+    #repair {
         right: 45%;
     }
 
