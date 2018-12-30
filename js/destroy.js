@@ -28,12 +28,31 @@ const newDestroy = () => {
     mainWrapper.style.animation = 'fadeOut 2.5s';
 
     window.setTimeout(() => {
-        repairButton.style.display = 'block';
-        repairButton.style.animation = 'fadeIn 2.5s';
-        body.style.backgroundImage = "url('./img/background_dark.png')";
-        body.style.backgroundColor = '#551d1d';
-        mainWrapper.style.display = 'none';
-        body.style.height = '1500px';
+        if (html.clientWidth < 900) {
+            repairButton.style.display = 'block';
+            repairButton.style.animation = 'fadeIn 2.5s';
+            body.style.backgroundImage = "url('./img/background_dark.png')";
+            body.style.backgroundColor = '#551d1d';
+            body.style.backgroundPosition = 'top right';
+            mainWrapper.style.display = 'none';
+        }
+        else if (html.clientWidth < 1300) {
+            repairButton.style.display = 'block';
+            repairButton.style.animation = 'fadeIn 2.5s';
+            body.style.backgroundImage = "url('./img/background_dark.png')";
+            body.style.backgroundColor = '#551d1d';
+            body.style.backgroundPosition = 'top right';
+            body.style.height = '1100px';
+            mainWrapper.style.display = 'none';
+        } else {
+            repairButton.style.display = 'block';
+            repairButton.style.animation = 'fadeIn 2.5s';
+            body.style.backgroundImage = "url('./img/background_dark.png')";
+            body.style.backgroundColor = '#551d1d';
+            body.style.backgroundPosition = 'top right';
+            body.style.height = '2000px';
+            mainWrapper.style.display = 'none';
+        }
     }, 2000 );
 }
 
