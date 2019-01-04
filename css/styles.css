@@ -1,759 +1,885 @@
-/**** 
-   --- Global website styles ---
+/****
+  --- Created By: Ben Youngblood ---
 ****/
 
-/* Set primary styles for body content */
+/**** 
+   --- Global website styles and animations ---
+****/
+
 html {
-    min-height: 100%;
-    position: relative;
-    box-sizing: border-box;
-    box-sizing: padding-box;
-    overflow-x: hidden;
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  box-sizing: padding-box;
+  overflow-x: hidden;
 }
 
 body {
-    margin: 0;
-    font-family: 'ZCOOL QingKe HuangYou', Arial, sans-serif;
-    background-color: #00bff3;
-    background-image: url('../img/background_light.png');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    color: #000000;
-}
-
-hr {
-    height: 3px;
-    border: none;
-    width: 80%;
-    margin-left: 0;
-    background-color: #0072bc;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-/* Remove padding from unordered list tags */
-ul {
-    padding: 0;
-}
-/* Remove bullet points and padding from list item tags */
-li {
-    list-style-type: none;
-    padding: 0;
-}
-/* Remove underline and set default font color for anchor tags */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-/* Headding styles */
-#pageHeading h1,
-#pageHeading h2 {
-    margin-bottom: 0;
-    font-size: 3rem;
-}
-/* Display main page wrappers as flex */
-#mainWrapper {
-    margin: auto auto 400px auto;
-    width: 85%;
+  margin: 0;
+  font-family: "ZCOOL QingKe HuangYou", Arial, sans-serif;
+  background-color: #00bff3;
+  background-image: url("../img/background_light.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: #000000;
 }
 
 header {
-    margin: 15px 0 15px 0;
+  margin: 15px 0 15px 0;
 }
 
-/* Cross site navigation styles */
+h1 {
+  -webkit-animation: fadeIn 2s;
+  animation: fadeIn 3s;
+}
+
+h2 {
+  font-size: 2.5rem;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+hr {
+  height: 3px;
+  border: none;
+  width: 80%;
+  margin-left: 0;
+  background-color: #0072bc;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#pageHeading h1,
+#pageHeading h2 {
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+
+#mainWrapper {
+  margin: auto auto 400px auto;
+  width: 85%;
+}
+
+#pageContent {
+  margin-right: 2%;
+  -webkit-animation: slideInContent 2s;
+  animation: slideInContent 2s;
+  font-size: 1.25rem;
+  z-index: -1;
+}
+
+/* Styling for destroy and repair website buttons */
+
+#destruct {
+  position: absolute;
+  right: 5px;
+  bottom: -50px;
+}
+
+#destruct button {
+  border: none;
+  padding: 5px;
+  width: 125px;
+  height: 30px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: #ec2028;
+  transition: 0.5s ease;
+}
+
+#destruct button:hover {
+  opacity: 0.75;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+#repair {
+  position: absolute;
+  right: 5px;
+  bottom: -50px;
+}
+
+#repair button {
+  border: none;
+  padding: 5px;
+  width: 125px;
+  height: 30px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: #00bff3;
+  transition: 0.5s ease;
+}
+
+#repair button:hover {
+  opacity: 0.75;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+/****
+  --- Cross site navigation styles and animations ---
+****/
+
 #mainNav {
-    display: flex;
-    background-color: #505050;
-    z-index: 2;
-    height: 100px;
-    box-shadow: 2px 0 10px #505050;
-    position: relative;
+  display: flex;
+  background-color: #505050;
+  z-index: 2;
+  height: 100px;
+  box-shadow: 2px 0 10px #505050;
+  position: relative;
 }
 
-/* Add padding to separate nav items */
 #mainNav ul {
-    display: flex;
-    margin: auto;
-    align-items: center;
+  display: flex;
+  margin: auto;
+  align-items: center;
 }
 
 #toggle {
-    text-align: center;
+  text-align: center;
 }
 
 #toggle.closed img {
-    width: 50px;
+  width: 50px;
 }
 
 #toggle.open img {
-    width: 25px;
+  width: 25px;
 }
 
 #toggle img:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #mainNav li {
-    padding: 0 15px 0 15px;
+  padding: 0 15px 0 15px;
 }
 
 #toggleItems {
-    display: flex;
+  display: flex;
 }
 
 .homeLi,
 .skillsLi,
 .aboutLi,
 .portLi {
-    text-align: center;
-    width: 50px;
-    color: #ffffff;
+  text-align: center;
+  width: 50px;
+  color: #ffffff;
 }
 
 .logoLi img {
-    cursor: pointer;
-    transition: .5s ease;
-    opacity: .5;
-    position: absolute;
-    left: 15px;
-    top: 25px;
-    border-radius: 25%;
-    width: 50px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  opacity: 0.5;
+  position: absolute;
+  left: 15px;
+  top: 25px;
+  border-radius: 25%;
+  width: 50px;
 }
 
 .homeLi img {
-    width: 30px;
-    animation: fadeIn .5s;
-    transition: .5s ease;
+  width: 30px;
+  animation: fadeIn 0.5s;
+  transition: 0.5s ease;
 }
 
 .aboutLi img {
-    width: 30px;
-    animation: fadeIn .5s;
-    transition: .5s ease;
+  width: 30px;
+  animation: fadeIn 0.5s;
+  transition: 0.5s ease;
 }
 
 .skillsLi img {
-    width: 30px;
-    animation: fadeIn .5s;
-    transition: .5s ease;
+  width: 30px;
+  animation: fadeIn 0.5s;
+  transition: 0.5s ease;
 }
 
 .portLi img {
-    width: 30px;
-    animation: fadeIn .5s;
-    transition: .5s ease;
+  width: 30px;
+  animation: fadeIn 0.5s;
+  transition: 0.5s ease;
 }
 
-/* Add hover animations to navigation items */
-
 .logoLi img:hover {
-    opacity: 1;
-    transition: .5s ease;
-    cursor: pointer;
+  opacity: 1;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .homeLi img:hover {
-    opacity: .5;
-    transition: .5s ease;
-    cursor: pointer;
+  opacity: 0.5;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .aboutLi img:hover {
-    opacity: .5;
-    transition: .5s ease;
-    cursor: pointer;
+  opacity: 0.5;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .skillsLi img:hover {
-    opacity: .5;
-    transition: .5s ease;
-    cursor: pointer;
+  opacity: 0.5;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .portLi img:hover {
-    opacity: .5;
-    transition: .5s ease;
-    cursor: pointer;
+  opacity: 0.5;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
-/* Add animation on page load */
-h1 {
-    -webkit-animation: fadeIn 2s;
-    animation: fadeIn 3s;
-}
+/****
+  --- Cross site footer styles ---
+****/
 
-h2 {
-    font-size: 2.5rem;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-
-/* Add margin to content to add space between content and navigation */
-#pageContent {
-    margin-right: 2%;
-    -webkit-animation: slideInContent 2s;
-    animation: slideInContent 2s;
-    font-size: 1.25rem;
-    z-index: -1;
-}
-
-/* Main Footer Styles */
 #mainFooter {
-    background-color: #505050;
-    color: rgb(255,255,255);
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+  background-color: #505050;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 #footerSect1 ul {
-    text-align: center;
-    font-size: 1.25rem;
+  text-align: center;
+  font-size: 1.25rem;
 }
 
 #footerSect1 li {
-    transition: .5s ease;
-    padding-bottom: 5px;
+  transition: 0.5s ease;
+  padding-bottom: 5px;
 }
 
 #footerSect1 li:hover {
-    cursor: pointer;
-    opacity: .5;
-    transition: .5s ease;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.5s ease;
 }
 
 #footerSect2 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 #footDesc {
-    font-size: 1rem;
-    width: 50%;
-    text-align: center;
-    padding-top: 5px;
-    margin: auto;
+  font-size: 1rem;
+  width: 50%;
+  text-align: center;
+  padding-top: 5px;
+  margin: auto;
 }
 
 #footerSect2,
 #footerSect3 {
-    text-align: center;
-    margin: 15px 0 15px 0;
+  text-align: center;
+  margin: 15px 0 15px 0;
 }
 
 #footerSect3 img {
-    width: 30px;
-    margin: 0 15px 0 15px;
-    transition: .5s ease;
+  width: 30px;
+  margin: 0 15px 0 15px;
+  transition: 0.5s ease;
 }
 
 #footerSect3 img:hover {
-    opacity: .5;
-    transition: .5s ease;
+  opacity: 0.5;
+  transition: 0.5s ease;
 }
 
 /**** 
    --- Home Page styles ---
 ****/
+
 #pageContent h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 #profileImage {
-    text-align: center;
-    margin: auto auto 400px auto;
-    padding-bottom: 15px;
-    max-width: 300px;
-    min-width: 200px;
-    border-radius: 15%;
-    box-shadow: 5px 5px 15px #505050;
-    background-color: #0072bc;
-    animation: dropInContent 2s; /* Animate on page load */
+  text-align: center;
+  margin: auto auto 400px auto;
+  padding-bottom: 15px;
+  max-width: 300px;
+  min-width: 200px;
+  border-radius: 15%;
+  box-shadow: 5px 5px 15px #505050;
+  background-color: #0072bc;
+  animation: dropInContent 2s; /* Animate on page load */
 }
 
 #profileImage img {
-    filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 #profileImage ul {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #profileImage li {
-    padding: 0 5px 0 5px;
+  padding: 0 5px 0 5px;
 }
 
 #profileImage span {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 #profile {
-    width: 75%;
-    padding: 15px;
-    border-radius: 50%;
+  width: 75%;
+  padding: 15px;
+  border-radius: 50%;
 }
 
 #husbandImg {
-    width: 20px;
+  width: 20px;
 }
 
 #friendImg {
-    width: 20px;
+  width: 20px;
 }
 
 #devImg {
-    width: 20px;
+  width: 20px;
 }
 
 #profileImage ul {
-    color: rgb(255,255,255);
-    margin-top: 0;
-}
-/* These buttons/features only display with JavaScript */
-#destruct {
-    position: absolute;
-    right: 5px;
-    bottom: -50px;
-}
-
-#destruct button {
-    border: none;
-    padding: 5px;
-    width: 125px;
-    height: 30px;
-    border-radius: 5px;
-    color: rgb(255,255,255);
-    background-color: #ec2028;
-    transition: 0.5s ease;
-}
-
-#destruct button:hover {
-    opacity: .75;
-    transition: .5s ease;
-    cursor: pointer;
-}
-
-#repair {
-    position: absolute;
-    right: 5px;
-    bottom: -50px;
-}
-
-#repair button {
-    border: none;
-    padding: 5px;
-    width: 125px;
-    height: 30px;
-    border-radius: 5px;
-    color: rgb(255,255,255);
-    background-color: #00bff3;
-    transition: 0.5s ease;
-}
-
-#repair button:hover {
-    opacity: .75;
-    transition: .5s ease;
-    cursor: pointer;
+  color: rgb(255, 255, 255);
+  margin-top: 0;
 }
 
 /**** 
    --- About Page styles ---
 ****/
+
 #aboutP {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 #dates {
-    margin-bottom: 300px;
-    font-size: 1.25rem;
+  margin-bottom: 300px;
+  font-size: 1.25rem;
 }
 
 #dates li:nth-child(even) {
-    background-color: #0072bc;
-    color: rgb(255,255,255);
-    margin-bottom: 15px;
-    min-height: 5rem;
-    max-width: 500px;
+  background-color: #0072bc;
+  color: rgb(255, 255, 255);
+  margin-bottom: 15px;
+  min-height: 5rem;
+  max-width: 500px;
 }
 
 #dates li:nth-child(odd) {
-    background-color: #f26522;
-    color: rgb(255,255,255);
-    margin-bottom: 15px;
-    min-height: 5rem;
-    max-width: 500px;
+  background-color: #f26522;
+  color: rgb(255, 255, 255);
+  margin-bottom: 15px;
+  min-height: 5rem;
+  max-width: 500px;
 }
 
 #dates li span {
-    animation: shrinkLetters 1s;
+  animation: shrinkLetters 1s;
 }
 
 #dates li span:hover {
-    animation: stretchLetters 1s;
+  animation: stretchLetters 1s;
 }
 
 #date1 {
-    padding: 15px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    animation: slideFromRight 1s;
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: slideFromRight 1s;
 }
 
 #date2 {
-    padding: 15px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    animation: slideFromLeft 1s;
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: slideFromLeft 1s;
 }
 
 #date3 {
-    padding: 15px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    animation: slideFromRight 1s;
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: slideFromRight 1s;
 }
 
 #date4 {
-    padding: 15px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    animation: slideFromLeft 1s;
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: slideFromLeft 1s;
 }
 
 #date5 {
-    padding: 15px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    animation: slideFromRight 1s;
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: slideFromRight 1s;
 }
 
 #date6 {
-    padding: 15px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    animation: slideFromLeft 1s;
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: slideFromLeft 1s;
+}
+
+#date7 {
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: slideFromLeft 1s;
 }
 
 /**** 
    --- Skills Page styles ---
 ****/
+
 #skillIcons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#skillIcons img {
+  padding-bottom: 15px;
 }
 
 #html {
-    animation: slideFromLeft 1.5s;
-    width: 85px;
-    height: 85px;
-    margin: 0 35px 0 35px;
+  animation: slideFromLeft 1.5s;
+  width: 85px;
+  height: 85px;
+  margin: 0 35px 0 35px;
 }
 
 #css {
-    animation: dropInContent 1.5s;
-    width: 85px;
-    height: 85px;
-    margin: 0 35px 0 35px;
+  animation: dropInContent 1.5s;
+  width: 85px;
+  height: 85px;
+  margin: 0 35px 0 35px;
 }
 
 #js {
-    animation: flyUpContent 1.5s;
-    width: 85px;
-    height: 85px;
-    margin: 0 35px 0 35px;
+  animation: flyUpContent 1.5s;
+  width: 85px;
+  height: 85px;
+  margin: 0 35px 0 35px;
 }
 
 #ps {
-    animation: slideFromRight 1.5s;
-    width: 70px;
-    height: 70px;
-    margin: 0 35px 0 35px;
+  animation: slideFromRight 1.5s;
+  width: 70px;
+  height: 70px;
+  margin: 0 35px 0 35px;
 }
 
 /**** 
    --- Portfolio Page styles ---
 ****/
+
 .virtualAssistant,
 .doWhat,
 .slayerTap {
-    text-align: center;
+  text-align: center;
 }
 
 #va,
 #dw {
-    width: 200px;
+  width: 200px;
 }
 
 #st {
-    width: 330px;
+  width: 330px;
 }
 
 .portProj {
-    text-align: left;
+  text-align: left;
 }
 
 .portProj p {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .portProj span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .portProj:last-of-type {
-    margin-bottom: 400px;
+  margin-bottom: 400px;
 }
 
 .projContent p {
-    animation: fadeIn 2.5s;
+  animation: fadeIn 2.5s;
 }
 
 .projContent button {
-    color: white;
-    background-color: #f26522;
-    width: 125px;
-    height: 50px;
-    border: none;    
-    border-radius: 15px;
+  color: white;
+  background-color: #f26522;
+  width: 125px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
 }
 
 /**** 
    --- Media queries for larger windows ---
 ****/
+
 @media (min-width: 700px) {
-    .logoLi img {
-        top: 25px;
-    }
+  /* Navigation styles */
+  .logoLi img {
+    top: 25px;
+  }
 
-    #pageContent {
-        max-width: 50%;
-    }
+  /* Cross site styles */
 
-    #profileImage {
-        margin: auto auto 400px 125px;
-    }
+  #pageContent {
+    max-width: 50%;
+  }
 
-    #skillIcons {
-        margin-top: 100px;
-    }
+  /* Home page styles */
 
-    #st {
-        width: 400px;
-    }
+  #profileImage {
+    margin: auto auto 400px 125px;
+  }
 
-    #mainFooter {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+  /* Footer styles */
 
-    #footerSect1,
-    #footerSect3 {
-        display: flex;
-        margin: 0 35px 0 35px;
-    }
+  #mainFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-    #footerSect2 {
-        margin: 0 35px 0 35px;
-        font-size: 1.5rem;
-    }
+  #footerSect1,
+  #footerSect3 {
+    display: flex;
+    margin: 0 35px 0 35px;
+  }
 
-    #footerSect3 img {
-        width: 30px;
-        margin: 0 15px 0 15px;
-    }
+  #footerSect2 {
+    margin: 0 35px 0 35px;
+    font-size: 1.5rem;
+  }
 
-    #footerSect3 img:hover {
-        cursor: pointer;
-    }
+  #footerSect3 img {
+    width: 30px;
+    margin: 0 15px 0 15px;
+  }
 
-    /* Portfolio styles */
-    .virtualAssistant,
-    .doWhat,
-    .slayerTap {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
+  #footerSect3 img:hover {
+    cursor: pointer;
+  }
 
-    .projContent {
-        margin-left: 50px;
-        max-width: 500px;
-        min-width: 300px;
-    }
+  /* Portfolio styles */
 
-    .gitButton {
-        min-width: 100px;
-    }
+  .virtualAssistant,
+  .doWhat,
+  .slayerTap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  #skillIcons {
+    margin-top: 100px;
+  }
+
+  #st {
+    width: 400px;
+  }
+
+  .projContent {
+    margin-left: 50px;
+    max-width: 500px;
+    min-width: 300px;
+  }
+
+  .gitButton {
+    min-width: 100px;
+  }
 }
 
 @media (min-width: 900px) {
-    #destruct,
-    #repair {
-        right: 45%;
-    }
+  /* Destroy and repair website button styles */
 
-    .homeLi,
-    .aboutLi,
-    .skillsLi,
-    .portLi {
-        margin: auto 45px auto 45px;
-    }
+  #destruct, /* Center button on larger screens */
+  #repair {
+    right: 45%;
+  }
 
-    .logoLi img {
-        width: 75px;
-        top: 13px;
-    }
+  /* Navigation styles */
 
-    .homeLi img,
-    .aboutLi img,
-    .skillsLi img,
-    .portLi img {
-        width: 35px;
-    }
+  .homeLi,
+  .aboutLi,
+  .skillsLi,
+  .portLi {
+    margin: auto 45px auto 45px;
+  }
 
-    .gitButton {
-        padding-left: 100px;
-    }
+  .logoLi img {
+    width: 75px;
+    top: 13px;
+  }
+
+  .homeLi img,
+  .aboutLi img,
+  .skillsLi img,
+  .portLi img {
+    width: 35px;
+  }
+
+  /* Footer styles */
+
+  .gitButton {
+    padding-left: 100px;
+  }
 }
 
-/* keyframes for various animations */
+/*** 
+  --- Keyframes for all site animations ---
+***/
+
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn2 {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeIn2 {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0;}
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0;}
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes slideInContent {
-    from {opacity: 0;
-          transform: translateX(-20px);}
-    to {opacity: 1;
-        transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @-webkit-keyframes slideInContent {
-    from {opacity: 0;
-          transform: translateX(-20px);}
-    to {opacity: 1;
-        transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideFromRight {
-    from {opacity: 0;
-          transform: translateX(120px);}
-    to {opacity: 1;
-        transform: translateX(0);}
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @-webkit-keyframes slideFromRight {
-    from {opacity: 0;
-          transform: translateX(120px);}
-    to {opacity: 1;
-        transform: translateX(0);}
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideFromLeft {
-    from {opacity: 0;
-          transform: translateX(-120px);}
-    to {opacity: 1;
-        transform: translateX(0);}
+  from {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @-webkit-keyframes slideFromLeft {
-    from {opacity: 0;
-          transform: translateX(-120px);}
-    to {opacity: 1;
-        transform: translateX(0);}
+  from {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes dropInContent {
-    from {opacity: 0;
-          transform: translateY(-20px);}
-    to {opacity: 1;
-        transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @-webkit-keyframes dropInContent {
-    from {opacity: 0;
-          transform: translateY(-20px);}
-    to {opacity: 1;
-        transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes flyUpContent {
-    from {opacity: 0;
-          transform: translateY(20px);}
-    to {opacity: 1;
-        transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @-webkit-keyframes flyUpContent {
-    from {opacity: 0;
-          transform: translateY(20px);}
-    to {opacity: 1;
-        transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes spinContent {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes spinContent {
-    from {opacity: 0;
-          transform: rotate(0deg);}
-    to {opacity: 1;
-        transform: rotate(360deg);}
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes stretchLetters {
-    from { letter-spacing: inherit; }
-    to   { letter-spacing: 4px; }
+  from {
+    letter-spacing: inherit;
+  }
+  to {
+    letter-spacing: 4px;
+  }
 }
 
 @-webkit-keyframes stretchLetters {
-    from { letter-spacing: inherit; }
-    to   { letter-spacing: 4px; }
+  from {
+    letter-spacing: inherit;
+  }
+  to {
+    letter-spacing: 4px;
+  }
 }
 
 @keyframes shrinkLetters {
-    from { letter-spacing: 4px; }
-    to   { letter-spacing: inherit; }
+  from {
+    letter-spacing: 4px;
+  }
+  to {
+    letter-spacing: inherit;
+  }
 }
 
 @-webkit-keyframes shrinkLetters {
-    from { letter-spacing: 4px; }
-    to   { letter-spacing: inherit; }
+  from {
+    letter-spacing: 4px;
+  }
+  to {
+    letter-spacing: inherit;
+  }
 }

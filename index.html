@@ -1,103 +1,134 @@
 <!DOCTYPE html>
-<html lang='en'>
-	<head>
-		<meta charset='UTF-8'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ben's Portfolio</title>
-        <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
-        <link href='css/styles.css' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben's Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <nav id="mainNav">
+      <ul>
+        <li class="logoLi">
+          <a href="index.html"><img src="img/logo.png" alt="Image of Ben"/></a>
+        </li>
+        <span id="toggle"></span>
+        <span id="toggleItems">
+          <a href="index.html"
+            ><li class="navLi homeLi">
+              <img src="img/homeIcon.png" alt="Home menu icon" /><span
+                >home</span
+              >
+            </li></a
+          >
+          <a href="about.html"
+            ><li class="navLi aboutLi">
+              <img src="img/aboutIcon.png" alt="Skills menu icon" /><span
+                >about</span
+              >
+            </li></a
+          >
+          <a href="skills.html"
+            ><li class="navLi skillsLi">
+              <img src="img/skills.png" alt="Skills menu icon" /><span
+                >skills</span
+              >
+            </li></a
+          >
+          <a href="portfolio.html"
+            ><li class="navLi portLi">
+              <img src="img/portIcon.jpg.png" alt="Portfolio menu icon" /><span
+                >portfolio</span
+              >
+            </li></a
+          >
+        </span>
+      </ul>
 
-        <nav id='mainNav'>
+      <!-- Placed in navigation for absolute positioning -->
+      <aside id="destruct">
+        <!--JavaScript theme change-->
+        <!--If JavaScript not available, code will not display and default theme will load-->
+      </aside>
 
-            <ul>
-                <li class ='logoLi'><a href='index.html'><img src='img/logo.png' alt='Image of Ben'></a></li>
-                <span id='toggle'></span>
-                <span id='toggleItems'>
-                        <a href='index.html'><li class='navLi homeLi'><img src='img/homeIcon.png' alt='Home menu icon'><span>home</span></li></a>
-                        <a href='about.html'><li class='navLi aboutLi'><img src='img/aboutIcon.png' alt='Skills menu icon'><span>about</span></li></a>
-                        <a href='skills.html'><li class='navLi skillsLi'><img src='img/skills.png' alt='Skills menu icon'><span>skills</span></li></a>
-                        <a href='portfolio.html'><li class='navLi portLi'><img src='img/portIcon.jpg.png' alt='Portfolio menu icon'><span>portfolio</span></li></a>
-                </span>
-            </ul>
+      <aside id="repair">
+        <!--JavaScript theme change-->
+        <!--If JavaScript not available, code will not display and default theme will load-->
+      </aside>
+    </nav>
 
-            <!-- Placed in navigation for absolute positioning -->
-            <aside id='destruct'>
-                <!--JavaScript theme change-->
-                <!--If JavaScript not available, code will not display and default theme will load-->
-            </aside>
+    <main id="mainWrapper">
+      <header id="pageHeading">
+        <h1>Ben.<br />making tomorrow brighter.</h1>
+      </header>
 
-            <aside id='repair'>
-                <!--JavaScript theme change-->
-                <!--If JavaScript not available, code will not display and default theme will load-->
-            </aside>
+      <section id="pageContent">
+        <h3>Hi,</h3>
+        <p>
+          My goal as a developer is to take ideas and turn them into beautiful,
+          interactive pieces that can be used to change business and the world.
+        </p>
+      </section>
 
-        </nav>
+      <section id="profileImage">
+        <img id="profile" src="img/profile.jpg" alt="Image of Ben" />
+        <ul>
+          <li>
+            <img id="husbandImg" src="img/husband.png" alt="Husband image" />
+            <span>Husband</span>
+          </li>
+          <li>
+            <img id="friendImg" src="img/friends.png" alt="Friend image" />
+            <span>Friend</span>
+          </li>
+          <li>
+            <img id="devImg" src="img/developer.png" alt="Developer image" />
+            <span>Developer</span>
+          </li>
+        </ul>
+      </section>
+    </main>
 
-        <main id='mainWrapper'>
+    <footer id="mainFooter">
+      <section id="footerSect1">
+        <ul>
+          <a href="index.html"><li class="footHomeLi">home</li></a>
+          <a href="about.html"><li class="footAboutLi">about</li></a>
+          <a href="skills.html"><li class="footSkillsLi">skills</li></a>
+          <a href="portfolio.html"><li class="footPortLi">portfolio</li></a>
+        </ul>
+      </section>
 
-            <header id='pageHeading'>
-                <h1>Ben.<br>making tomorrow brighter.</h1>
-            </header>
+      <section id="footerSect2">
+        <span>Ben Youngblood</span> <br />
+        <p id="footDesc">
+          A developer from Central Arkansas always looking for great
+          opportunities and working towards growing into a better husband,
+          developer, and friend.
+        </p>
+      </section>
 
-            <section id='pageContent'>
-                <h3>Hi,</h3>
-                <p>This website has been built to showcase my skillset in development and design. This site is built with HTML, CSS, and JavaScript.
-                        Please reach out with any questions.
-                </p>
-            </section>
-            
-            <section id='profileImage'>
-                <img id='profile' src='img/profile.jpg' alt='Image of Ben'>
-                <ul>
-                    <li>
-                        <img id='husbandImg' src='img/husband.png' alt='Husband image'>
-                        <span>Husband</span>
-                    </li>
-                    <li>
-                        <img id='friendImg' src='img/friends.png' alt='Friend image'>
-                        <span>Friend</span>
-                    </li>
-                    <li>
-                        <img id='devImg' src='img/developer.png' alt='Developer image'>
-                        <span>Developer</span>
-                    </li>
-                </ul>
-            </section>
+      <section id="footerSect3">
+        <a
+          href="https://www.linkedin.com/in/benjamin-youngblood-5824bbb0"
+          target="_blank"
+          ><img src="img/linkedin.png" alt="LinkedIn Icon"
+        /></a>
+        <a href="https://github.com/Benstrocity" target="_blank"
+          ><img src="img/github.png" alt="github icon"
+        /></a>
+        <a href="mailto:byoungblood.c@gmail.com"
+          ><img src="img/email.png" alt="Email icon"
+        /></a>
+      </section>
+    </footer>
 
-        </main>
-
-        <footer id='mainFooter'>
-
-            <section id='footerSect1'>
-                <ul>
-                    <a href='index.html'><li class='footHomeLi'>home</li></a>
-                    <a href='about.html'><li class='footAboutLi'>about</li></a>
-                    <a href='skills.html'><li class='footSkillsLi'>skills</li></a>
-                    <a href='portfolio.html'><li class='footPortLi'>portfolio</li></a>
-                </ul>
-            </section>
-
-            <section id='footerSect2'>
-                <span>Ben Youngblood</span>
-                <br>
-                <p id='footDesc'>A developer from Central Arkansas always looking for great opportunities and working towards
-                    growing into a better husband, developer, and friend.
-                </p>
-            </section> 
-
-            <section id='footerSect3'>
-                <a href='https://www.linkedin.com/in/benjamin-youngblood-5824bbb0' target='_blank'><img src='img/linkedin.png' alt='LinkedIn Icon'></a>
-                <a href='https://github.com/Benstrocity' target='_blank'><img src='img/github.png' alt='github icon'></a>
-                <a href='mailto:byoungblood.c@gmail.com'><img src='img/email.png' alt='Email icon'></a>
-            </section>
-
-        </footer>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src='js/destroy.js'></script>
-        <script src='js/menu.js'></script>
-
-	</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/destroy.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
 </html>
